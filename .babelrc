@@ -1,5 +1,6 @@
 {
   "presets": [
+    "@babel/preset-flow",
     [
       "@babel/preset-env",
       {
@@ -35,7 +36,7 @@
           }
         ]
       ],
-      "plugins": []
+      "plugins": ["flow-runtime"]
     },
     "production": {
       "presets": ["@babel/preset-react"],

@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
@@ -5,7 +6,9 @@ import { AppContainer } from 'react-hot-loader';
 import Redbox from 'redbox-react';
 import Presentation from './Presentation';
 
-const CustomErrorReporter = ({ error }) => <Redbox error={error} />;
+const CustomErrorReporter = ({ error }: { error: Error }): Node => (
+  <Redbox error={error} />
+);
 
 CustomErrorReporter.propTypes = {
   error: PropTypes.instanceOf(Error).isRequired,
