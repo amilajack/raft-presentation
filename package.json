@@ -9,7 +9,7 @@
     "url": "git+https://github.com/vikr01/raft-presentation.git"
   },
   "bugs": "https://github.com/nutanix/vikr01/raft-presentation/issues",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {
     "build": "yarn run clean && concurrently --raw \"yarn run build-pack\" \"yarn run compile\"",
