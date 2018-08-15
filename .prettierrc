@@ -2,7 +2,7 @@
   "printWidth": 80,
   "overrides": [
     {
-      "files": [".babelrc", ".eslintrc", ".prettierrc"],
+      "files": [".babelrc", ".eslintrc", ".prettierrc", ".stylelintrc"],
       "options": {
         "parser": "json",
         "bracketSpacing": false
