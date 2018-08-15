@@ -7,6 +7,14 @@
   },
   "extends": ["plugin:security/recommended"],
   "rules": {
-    "import/no-extraneous-dependencies": 0
+    "import/no-extraneous-dependencies": 0,
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used",
+        "varsIgnorePattern": "PropTypes",
+        "ignoreRestSiblings": true
+      }
+    ]
   }
 }

@@ -16,6 +16,8 @@
     "@babel/plugin-syntax-dynamic-import",
     ["prism-import", {"libraryName": "prism-reactjs", "style": "css"}],
     "add-module-exports",
+    ["@babel/plugin-proposal-decorators", {"legacy": true}],
+    ["@babel/plugin-proposal-class-properties", {"loose": true}],
     [
       "@babel/plugin-transform-runtime",
       {"helpers": false, "corejs": 2, "regenerator": true}

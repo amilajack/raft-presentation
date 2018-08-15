@@ -8328,18 +8328,18 @@ react-dom@^16.4.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-draggable@^2.1.1:
-  version "2.2.6"
-  resolved "http://drt-ep-artifactory-dev-1.eng.nutanix.com:8081/artifactory/api/npm/canaveral-npm-virtual/react-draggable/-/react-draggable-2.2.6.tgz#3a806e10f2da6babfea4136be6510e89b0d76901"
-  dependencies:
-    classnames "^2.2.5"
-
-"react-draggable@^2.2.6 || ^3.0.3":
+react-draggable@3.x, "react-draggable@^2.2.6 || ^3.0.3":
   version "3.0.5"
   resolved "http://drt-ep-artifactory-dev-1.eng.nutanix.com:8081/artifactory/api/npm/canaveral-npm-virtual/react-draggable/-/react-draggable-3.0.5.tgz#c031e0ed4313531f9409d6cd84c8ebcec0ddfe2d"
   dependencies:
     classnames "^2.2.5"
     prop-types "^15.6.0"
+
+react-draggable@^2.1.1:
+  version "2.2.6"
+  resolved "http://drt-ep-artifactory-dev-1.eng.nutanix.com:8081/artifactory/api/npm/canaveral-npm-virtual/react-draggable/-/react-draggable-2.2.6.tgz#3a806e10f2da6babfea4136be6510e89b0d76901"
+  dependencies:
+    classnames "^2.2.5"
 
 react-emotion@^8.0.8:
   version "8.0.12"
@@ -8355,6 +8355,16 @@ react-grid-layout@^0.13.9:
     lodash.isequal "^4.0.0"
     react-draggable "^2.1.1"
     react-resizable "^1.4.0"
+
+react-grid-layout@^0.16.6:
+  version "0.16.6"
+  resolved "https://registry.yarnpkg.com/react-grid-layout/-/react-grid-layout-0.16.6.tgz#9b2407a2b946c2260ebaf66f13b556e1da4efeb2"
+  dependencies:
+    classnames "2.x"
+    lodash.isequal "^4.0.0"
+    prop-types "15.x"
+    react-draggable "3.x"
+    react-resizable "1.x"
 
 react-hot-loader@^4.1.2, react-hot-loader@^4.3.4:
   version "4.3.4"
@@ -8415,7 +8425,7 @@ react-redux@^5.0.5:
     loose-envify "^1.1.0"
     prop-types "^15.6.0"
 
-react-resizable@^1.4.0:
+react-resizable@1.x, react-resizable@^1.4.0:
   version "1.7.5"
   resolved "http://drt-ep-artifactory-dev-1.eng.nutanix.com:8081/artifactory/api/npm/canaveral-npm-virtual/react-resizable/-/react-resizable-1.7.5.tgz#83eb75bb3684da6989bbbf4f826e1470f0af902e"
   dependencies:
