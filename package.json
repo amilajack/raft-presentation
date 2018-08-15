@@ -1,40 +1,45 @@
 {
   "private": true,
   "name": "@raft/presentation",
-  "version": "1.0.1",
   "description": "Summer 2018 Internship Presentation",
+  "license": "MIT",
+  "author": "Vikram Rangaraj <vik120@icloud.com> (https://github.com/vikr01)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikr01/raft-presentation.git"
+  },
+  "bugs": "https://github.com/nutanix/vikr01/raft-presentation/issues",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "build": "yarn run clean && concurrently \"yarn run build-pack\" \"yarn run compile\"",
+    "build": "yarn run clean && concurrently --raw \"yarn run build-pack\" \"yarn run compile\"",
+    "build-pack": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.prod.babel.js --progress --colors",
+    "clean": "rimraf 'dist'",
+    "precommit": "lint-staged",
     "compile": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps --copy-files",
     "dev": "cross-env NODE_ENV=development webpack-dashboard --color blue -- webpack-dev-server --config ./webpack/webpack.config.devserver.babel.js",
+    "export": "spectacle-renderer --delay 3000",
     "lint": "eslint './**/*.*(js|jsx)'",
     "lint-fix": "yarn run lint --fix",
     "lint-styles": "stylelint --ignore-path .eslintignore '**/*.*(css|scss)' --syntax scss",
     "lint-styles-fix": "yarn run lint-styles --fix",
     "postlint-styles-fix": "prettier --ignore-path .eslintignore '**/*.*(css|scss|less)'",
     "prepublishOnly": "yarn run build",
-    "test": "yarn run lint && #jest tests should go here",
-    "webpack": "webpack",
-    "build-pack": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.prod.babel.js --progress --colors",
-    "clean": "rimraf 'dist'",
     "start": "node dist/server.js",
-    "export": "spectacle-renderer --delay 3000",
-    "precommit": "lint-staged"
+    "test": "yarn run lint && #jest tests should go here",
+    "webpack": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vikr01/raft-presentation.git"
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3"
   },
-  "bugs": "https://github.com/nutanix/vikr01/raft-presentation/issues",
-  "author": "Vikram Rangaraj <vik120@icloud.com> (https://github.com/vikr01)",
-  "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "7.0.0-rc.1",
+    "@babel/cli": "^7.0.0-rc.1",
     "@babel/core": "^7.0.0-rc.1",
     "@babel/plugin-proposal-class-properties": "^7.0.0-rc.1",
     "@babel/plugin-proposal-decorators": "7.0.0-rc.1",
     "@babel/plugin-proposal-object-rest-spread": "7.0.0-rc.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-rc.1",
     "@babel/plugin-transform-react-constant-elements": "7.0.0-rc.1",
     "@babel/plugin-transform-react-inline-elements": "7.0.0-rc.1",
     "@babel/plugin-transform-runtime": "7.0.0-rc.1",
@@ -47,6 +52,7 @@
     "babel-eslint": "^8.2.6",
     "babel-loader": "^8.0.0-beta.3",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-prism-import": "^1.0.0",
     "babel-plugin-react-transform": "^3.0.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.14",
     "clean-webpack-plugin": "^0.1.19",
@@ -78,6 +84,7 @@
     "normalize.css": "^8.0.0",
     "prettier": "^1.14.2",
     "prettier-package-json": "^2.0.0",
+    "prism-reactjs": "^1.2.2",
     "prop-types": "^15.6.2",
     "raw-loader": "^0.5.1",
     "react": "^16.4.1",
@@ -133,9 +140,5 @@
         "git add"
       ]
     }
-  },
-  "dependencies": {
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3"
   }
 }
