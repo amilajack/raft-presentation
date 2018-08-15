@@ -23,10 +23,11 @@ export default merge.smartStrategy({
         use: [
           {
             loader: 'babel-loader',
-            // options: {
-            //   babelrc: true,
-            //   plugins: ['react-hot-loader/babel'],
-            // },
+            options: {
+              cacheDirectory: true,
+              babelrc: true,
+              plugins: ['react-hot-loader/babel'],
+            },
           }
         ],
       },

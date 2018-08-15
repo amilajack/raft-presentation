@@ -10,15 +10,12 @@ const port = process.env.PORT || 3000;
 const open = process.env.OPEN === 'true' || false;
 const ssl = process.env.SSL === 'true' || false;
 
-console.log('loaded');
-
 export default merge.smartStrategy({
   entry: 'prepend',
   plugins: 'append',
 })(webpackDev, {
   entry: {
     Presentation: [
-      'react-hot-loader/patch',
       `webpack-dev-server/client?http${ssl ? 's' : ''}://localhost:${port}/`,
       'webpack/hot/only-dev-server'
     ],

@@ -1,6 +1,5 @@
 {
   "presets": [
-    "@babel/preset-flow",
     [
       "@babel/preset-env",
       {
@@ -9,56 +8,31 @@
         },
         "useBuiltIns": "usage"
       }
+    ],
+    "@babel/preset-flow"
+  ],
+
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    ["prism-import", {"libraryName": "prism-reactjs", "style": "css"}],
+    "add-module-exports",
+    [
+      "@babel/plugin-transform-runtime",
+      {"helpers": false, "corejs": 2, "regenerator": true}
     ]
   ],
-  "plugins": ["@babel/plugin-syntax-dynamic-import"],
 
   "env": {
     "development": {
-      "presets": [
-        [
-          "@babel/preset-react",
-          {
-            "development": true
-          }
-        ]
-      ],
-      "plugins": [
-        "add-module-exports",
-        ["prism-import", {"libraryName": "prism-reactjs", "style": "css"}],
-        "flow-runtime",
-        [
-          "@babel/plugin-transform-runtime",
-          {
-            "helpers": false,
-            "corejs": 2,
-            "regenerator": true
-          }
-        ],
-        "@babel/plugin-proposal-object-rest-spread"
-      ]
+      "presets": [["@babel/preset-react", {"development": true}]],
+      "plugins": ["flow-runtime", "@babel/plugin-proposal-object-rest-spread"]
     },
     "production": {
       "presets": ["@babel/preset-react"],
       "plugins": [
-        "add-module-exports",
-        ["prism-import", {"libraryName": "prism-reactjs", "style": "css"}],
         "@babel/plugin-transform-react-constant-elements",
         "@babel/plugin-transform-react-inline-elements",
-        [
-          "transform-react-remove-prop-types",
-          {
-            "removeImport": true
-          }
-        ],
-        [
-          "@babel/plugin-transform-runtime",
-          {
-            "helpers": false,
-            "corejs": 2,
-            "regenerator": true
-          }
-        ]
+        ["transform-react-remove-prop-types", {"removeImport": true}]
       ]
     }
   }
