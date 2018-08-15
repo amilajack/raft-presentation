@@ -1,0 +1,82 @@
+{
+  "eslint.trace.server": "messages",
+  "files.insertFinalNewline": true,
+
+  "files.associations": {
+    "*.jsx": "javascriptreact",
+
+    ".env": "ignore",
+    ".env.example": "ignore",
+    ".eslintignore": "ignore",
+    ".flowconfig": "ignore",
+    ".npmrc": "ignore",
+    ".prettierignore": "ignore",
+    ".yarnrc": "ignore",
+
+    "*.json": "jsonc",
+    "package.json": "json",
+    ".babelrc": "jsonc",
+    ".eslintrc": "jsonc",
+    ".prettierrc": "jsonc",
+    ".sailsrc": "jsonc",
+    ".stylelintrc": "json"
+  },
+
+  "files.watcherExclude": {
+    "**/.git/": true,
+    "**/node_modules": true,
+    "**/*.bundle.js": true
+  },
+
+  "editor.tabSize": 2,
+
+  "javascript.format.enable": false,
+
+  "javascript.validate.enable": false,
+
+  "json.format.enable": false,
+
+  "typescript.format.enable": false,
+
+  "html.format.enable": false,
+
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.formatOnSave": true
+  },
+
+  "[jsonc]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.formatOnSave": true
+  },
+
+  "eslint.workingDirectories": ["."],
+
+  "eslint.packageManager": "yarn",
+
+  "eslint.validate": ["javascript", "javascriptreact"],
+
+  "eslint.autoFixOnSave": true,
+
+  "editor.formatOnSave": false,
+
+  "node-module-intellisense.modulePaths": ["./node_modules"],
+  "node-module-intellisense.scanDevDependencies": false,
+
+  "prettier.eslintIntegration": true,
+  "prettier.ignorePath": ".eslintignore",
+
+  "code-runner.defaultLanguage": "javascript"
+}

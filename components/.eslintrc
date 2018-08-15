@@ -1,0 +1,12 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "commonjs": false
+  },
+  "extends": ["plugin:security/recommended"],
+  "rules": {
+    "import/no-extraneous-dependencies": 0
+  }
+}

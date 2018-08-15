@@ -1,21 +1,53 @@
----
-"extends":
-  - "formidable/configurations/es6-react"
-
-"rules":
-  "indent": [2, 2, {"SwitchCase": 1}]
-  "max-len": 0
-  "no-magic-numbers": 0
-  "react/prefer-es6-class": 0
-  "react/no-multi-comp": 0
-
-"env":
-  "browser": true,
-  "node": true
-"globals":
-  "afterEach": true,
-  "describe": true,
-  "expect": true,
-  "it": true,
-  "jest": true,
-  "test": true
+{
+  "env": {
+    "es6": true,
+    "browser": false,
+    "node": true,
+    "commonjs": false
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "babel",
+    "filenames",
+    "flowtype",
+    "import",
+    "jsx-a11y",
+    "promise",
+    "react",
+    "security"
+  ],
+  "extends": [
+    "plugin:promise/recommended",
+    "plugin:flowtype/recommended",
+    "airbnb"
+  ],
+  "rules": {
+    "comma-dangle": ["error", {"objects": "always-multiline"}],
+    "import/no-commonjs": "error",
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-console": 0,
+    "no-magic-numbers": 0,
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      {"props": "always", "children": "ignore"}
+    ],
+    "react/jsx-filename-extension": ["error", {"extensions": [".jsx"]}],
+    "react/jsx-no-bind": 0,
+    "react/prefer-stateless-function": 0
+  },
+  "globals": {
+    "afterEach": true,
+    "describe": true,
+    "expect": true,
+    "it": true,
+    "jest": true,
+    "test": true
+  }
+}

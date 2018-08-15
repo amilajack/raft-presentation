@@ -1,28 +1,55 @@
 {
   "presets": [
-    [ "es2015", { "loose": true, "modules" : false } ],
-    "stage-0",
-    "react"
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["last 1 version", "not dead", "> 1% in US"]
+        },
+        "useBuiltIns": "usage"
+      }
+    ]
   ],
   "plugins": [
+    "add-module-exports",
     "react-hot-loader/babel",
-    "transform-decorators-legacy"
+    "@babel/plugin-proposal-object-rest-spread",
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "helpers": false,
+        "corejs": 2,
+        "regenerator": true
+      }
+    ]
+    // ["prism-import", {"libraryName": "prism-reactjs", "style": "css"}]
   ],
   "env": {
-    "production": {
-      "plugins": [
-        "transform-es2015-modules-commonjs",
-        "transform-react-remove-prop-types",
-        "transform-react-constant-elements",
-        "transform-react-inline-elements",
-        "transform-runtime",
-        "transform-decorators-legacy"
+    "development": {
+      "plugins": [],
+      "presets": [
+        [
+          "@babel/preset-react",
+          {
+            "development": true
+          }
+        ]
       ]
     },
-    "test": {
+    "production": {
       "plugins": [
-        "transform-es2015-modules-commonjs"
-      ]
+        "transform-react-remove-prop-types",
+        "@babel/plugin-transform-react-constant-elements",
+        "@babel/plugin-transform-react-inline-elements",
+        "@babel/plugin-transform-runtime",
+        [
+          "transform-react-remove-prop-types",
+          {
+            "removeImport": true
+          }
+        ]
+      ],
+      "presets": ["@babel/preset-react"]
     }
   }
 }
