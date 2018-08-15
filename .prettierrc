@@ -8,5 +8,6 @@
         "bracketSpacing": false
       }
     }
-  ]
+  ],
+  "singleQuote": true
 }
