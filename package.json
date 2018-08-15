@@ -31,6 +31,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
     "@babel/plugin-proposal-class-properties": "^7.0.0-rc.1",
     "@babel/plugin-proposal-decorators": "7.0.0-rc.1",
     "@babel/plugin-proposal-object-rest-spread": "7.0.0-rc.1",
@@ -82,10 +83,12 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-hot-loader": "^3.1.1",
+    "react-router-dom": "^4.3.1",
     "react-transform-catch-errors": "^1.0.2",
     "redbox-react": "^1.5.0",
     "rimraf": "^2.6.2",
     "spectacle": "^5.0.0",
+    "spectacle-code-slide": "^0.5.2",
     "spectacle-renderer": "^0.0.3",
     "style-loader": "^0.19.0",
     "stylelint": "^9.4.0",
@@ -132,7 +135,6 @@
     }
   },
   "dependencies": {
-    "@babel/core": "^7.0.0-rc.1",
     "dotenv": "^6.0.0",
     "express": "^4.16.3"
   }
