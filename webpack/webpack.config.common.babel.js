@@ -9,13 +9,14 @@ import Globals from './globals';
 import { productName as name } from '../package.json';
 
 const title = titleCase(name);
+
 export default {
   target: 'web',
 
   context: path.join(__dirname, '..'),
 
   entry: {
-    Presentation: [path.join(__dirname, '..', 'components/Entry.jsx')],
+    Presentation: [path.join(__dirname, '..', 'src/components/Entry.jsx')],
   },
 
   resolve: {
@@ -29,12 +30,6 @@ export default {
 
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: [{ loader: 'babel-loader' }],
-      },
-
       {
         test: /\.css$/,
         use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
@@ -58,18 +53,6 @@ export default {
             },
           }
         ],
-      },
-
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: {
-              name: '[name].[ext]',
-            },
-          }
-        ],
       }
     ],
   },
@@ -90,7 +73,7 @@ export default {
     new HtmlWebpackPlugin({
       title,
       inject: true,
-      template: path.join(__dirname, '..', 'templates/index.html'),
+      template: path.join(__dirname, '..', 'src/templates/index.ejs'),
       filename: path.join(__dirname, '..', 'dist/assets/index.html'),
     })
   ],

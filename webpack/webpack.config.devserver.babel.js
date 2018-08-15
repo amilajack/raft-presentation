@@ -18,6 +18,7 @@ export default merge.smartStrategy({
 })(webpackDev, {
   entry: {
     Presentation: [
+      'react-hot-loader/patch',
       `webpack-dev-server/client?http${ssl ? 's' : ''}://localhost:${port}/`,
       'webpack/hot/only-dev-server'
     ],

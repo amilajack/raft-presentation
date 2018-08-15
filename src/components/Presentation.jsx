@@ -1,5 +1,6 @@
 import 'normalize.css';
 import React, { Component } from 'react';
+import { hot } from 'react-hot-loader';
 import {
   BlockQuote,
   Cite,
@@ -26,7 +27,7 @@ const theme = createTheme(
   }
 );
 
-export default class Presentation extends Component {
+class Presentation extends Component {
   render() {
     return (
       <Deck
@@ -90,3 +91,5 @@ export default class Presentation extends Component {
     );
   }
 }
+
+export default hot(module)(Presentation);

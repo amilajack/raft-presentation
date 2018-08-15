@@ -17,6 +17,15 @@ export default merge.smartStrategy({
 
   devtool: 'source-map',
 
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: [{ loader: 'babel-loader' }],
+      }
+    ],
+  },
+
   output: {
     filename: '[hash].js',
     chunkFilename: '[hash].[chunkhash].js',

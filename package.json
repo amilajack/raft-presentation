@@ -15,7 +15,7 @@
     "build": "yarn run clean && concurrently --raw \"yarn run build-pack\" \"yarn run compile\"",
     "build-pack": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.prod.babel.js --progress --colors",
     "clean": "rimraf 'dist'",
-    "compile": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps --copy-files",
+    "compile": "cross-env NODE_ENV=production babel src/index.js --out-dir dist --source-maps --copy-files",
     "dev": "cross-env NODE_ENV=development webpack-dashboard --color blue -- webpack-dev-server --config ./webpack/webpack.config.devserver.babel.js",
     "export": "spectacle-renderer --delay 3000",
     "lint": "eslint './**/*.*(js|jsx)'",
@@ -90,10 +90,9 @@
     "raw-loader": "^0.5.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-hot-loader": "^3.1.1",
+    "react-hot-loader": "^4.3.4",
     "react-router-dom": "^4.3.1",
     "react-transform-catch-errors": "^1.0.2",
-    "redbox-react": "^1.5.0",
     "rimraf": "^2.6.2",
     "spectacle": "^5.0.0",
     "spectacle-code-slide": "^0.5.2",
@@ -147,5 +146,6 @@
         "git add"
       ]
     }
-  }
+  },
+  "productName": "Raft Presentation"
 }
