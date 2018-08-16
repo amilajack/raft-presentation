@@ -23,13 +23,13 @@ const theme = createTheme(
     primary: '#0C4B9B',
     header: '#AFD135',
     secondary: 'white',
-    tertiary: '#03A9FC',
-    quaternary: '#CECECE',
+    body: '#76787A',
   },
   // fonts
   {
     primary: 'Ntnx',
     secondary: 'Ntnx',
+    body: 'Ntnx',
   }
 );
 

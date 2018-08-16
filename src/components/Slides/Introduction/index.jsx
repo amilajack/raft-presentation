@@ -23,7 +23,9 @@ import Profile from './Profile';
 //   </Slide>
 // );
 
-const Introduction = props => <React.Fragment>{[<Profile />]}</React.Fragment>;
+const Introduction = props => (
+  <React.Fragment>{[<Profile key={'profile'} />]}</React.Fragment>
+);
 
 Introduction.displayName = 'Introduction';
 

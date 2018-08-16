@@ -6,6 +6,7 @@ import {
   BlockQuote,
   Cite,
   Deck,
+  Fit,
   Heading,
   ListItem,
   List,
@@ -28,15 +29,20 @@ export default class Profile extends Component {
 
   render() {
     return (
-      <Slide transition={['fade']} bgColor={'tertiary'}>
-        <Heading>Introduction</Heading>
-        <List>
+      <Slide transition={['fade']} bgColor={'secondary'}>
+        <Heading textColor={'primary'}>Introduction</Heading>
+        <List textColor={'body'}>
           <ListItem>San Jose State University</ListItem>
           <List>
             <ListItem>B.S., Computer Science</ListItem>
             <ListItem>Minor, Mathematics</ListItem>
             <ListItem>Graduating May 2019</ListItem>
           </List>
+          <Fit>
+            <ListItem>
+              Internship Duration: May - August 2018 (3 Months)
+            </ListItem>
+          </Fit>
         </List>
       </Slide>
     );

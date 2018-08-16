@@ -14,8 +14,8 @@ import {
 } from 'spectacle';
 import NutanixSVGLogo from './NutanixNegSVGLogo';
 
-const index = props => (
-  <Slide transition={['zoom']} bgColor={'primary'}>
+const Title = props => (
+  <Slide transition={['zoom']} bgColor={'primary'} {...props}>
     <Heading
       size={1}
       lineHeight={3}
@@ -51,10 +51,11 @@ const index = props => (
     </Text>
   </Slide>
 );
-index.displayName = 'index';
 
-index.propTypes = {};
+Title.displayName = 'index';
 
-index.defaultProps = {};
+Title.propTypes = {};
 
-export default index;
+Title.defaultProps = {};
+
+export default Title;

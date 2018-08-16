@@ -85,14 +85,13 @@
       "  Text",
       "} from 'spectacle';",
       "",
-      "const${TM_DIRECTORY/^.+\\/(.*)$/$1/} = (props) => <Fragment>{[]}</Fragment>;",
+      "const ${TM_DIRECTORY/^.+\\/(.*)$/$1/} = (props) => <Fragment>{[]}</Fragment>;",
       "${TM_DIRECTORY/^.+\\/(.*)$/$1/}.displayName = '${TM_DIRECTORY/^.+\\/(.*)$/$1/}';",
       "",
       "${TM_DIRECTORY/^.+\\/(.*)$/$1/}.propTypes = {};",
       "",
       "${TM_DIRECTORY/^.+\\/(.*)$/$1/}.defaultProps = {};",
       "",
-      "${TM_DIRECTORY}",
       "export default ${TM_DIRECTORY/^.+\\/(.*)$/$1/};",
       ""
     ]

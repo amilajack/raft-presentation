@@ -66,6 +66,7 @@ export default {
     new EnvironmentPlugin({
       DEBUG: JSON.stringify(process.env.DEBUG) || false,
       TITLE: title,
+      REACT_ROOT: 'root',
     }),
 
     new ProvidePlugin(Globals),
