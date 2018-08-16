@@ -20,12 +20,17 @@ const Obstacles = props => (
     <Heading textColor={'primary'} lineHeight={1}>
       {'Obstacles'}
     </Heading>
-    <List textColor={'body'}>
+    <List textColor={'body'} style={{ paddingLeft: 'inherit' }}>
       <ListItem>
         {'Understanding relations between existing SQL Tables'}
       </ListItem>
       <ListItem>{'Migrating from original frontend'}</ListItem>
       <ListItem>{'Too many planned features'}</ListItem>
+      <List textColor={'body'} style={{ paddingLeft: 'inherit' }}>
+        <ListItem>{'Test Cases'}</ListItem>
+        <ListItem>{'Mass Amendment'}</ListItem>
+        <ListItem>{'Redux, Redux-Saga'}</ListItem>
+      </List>
       <ListItem>{'Communication with non-React devs'}</ListItem>
       <ListItem>{'No time to write test cases'}</ListItem>
     </List>

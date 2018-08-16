@@ -20,7 +20,7 @@ const NewExperience = props => (
     <Heading textColor={'primary'} lineHeight={1}>
       {'After 2017 Internship'}
     </Heading>
-    <List textColor={'body'} style={{ whiteSpace: 'nowrap' }}>
+    <List textColor={'body'}>
       <ListItem>{"SJSU President's list - 4.0 GPA for 2017"}</ListItem>
       <ListItem>{'First hackathon - UCSB Jan 2018'}</ListItem>
       <ListItem>{'Math Teaching Assistant'}</ListItem>
