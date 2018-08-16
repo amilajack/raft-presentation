@@ -1,7 +1,7 @@
 // @flow
 // import 'normalize.css';
 import 'highlight.js/styles/atom-one-dark.css';
-import 'prism-reactjs/dist/index.css';
+// import 'prism-reactjs/dist/index.css';
 import '../styles/custom_style.css';
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
