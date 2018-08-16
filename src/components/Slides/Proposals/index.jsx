@@ -5,6 +5,7 @@ import Yarn from './Yarn';
 import Flow from './Flow';
 import Lerna from './Lerna';
 import ScopedPackages from './ScopedPackages';
+import NoMoreSails from './NoMoreSails';
 
 export default [
   <Title key={'proposals title'} />,
@@ -13,4 +14,5 @@ export default [
   <Flow key={'flow proposal'} />,
   <Lerna key={'lerna proposal'} />,
   <ScopedPackages key={'scoped package proposal'} />,
+  <NoMoreSails key={'no more sails'} />,
 ];

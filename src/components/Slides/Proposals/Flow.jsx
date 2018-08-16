@@ -16,9 +16,20 @@ import {
 import Highlight from 'react-highlight.js';
 import FlowLogo from './Logos/FlowLogo';
 
-const flowExample = `function foo(bar: string): number {
-  console.log(bar);
-  return 10;
+const flowExample = `import React, {Fragment} from 'react';
+import type {Node} from 'react';
+type Props = {
+  language: string
+};
+
+const ViksComponent = (props: Props): Node => {
+  return (
+    <Fragment>
+      {\`Vik is
+        \${props.language === 'javascript' ? '' : 'not '}
+        happy\`}
+    </Fragment>
+  )
 }`;
 
 const Flow = props => (

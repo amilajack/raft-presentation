@@ -16,15 +16,16 @@ import {
 } from 'spectacle';
 
 const source = `.
-├── Title
+├── Agenda
 ├── Introduction
 ├── Project Goals
 ├── Use Case Demos
+├── Software Stack
 ├── Obstacles
 ├── Proposals
 ├── Conclusion
-├── Q&A
-└── Live Demo`;
+├── Live Demo
+└── Q&A`;
 
 const Agenda = props => (
   <Slide transition={['fade']} bgColor={'primary'} {...props}>

@@ -21,7 +21,8 @@ const Yarn = props => (
     <YarnLogo width={null} height={'200px'} />
     <List textColor={'body'}>
       <ListItem>{'Faster than NPM'}</ListItem>
-      <ListItem>{'Commonly used by node developers today'}</ListItem>
+      <ListItem>{'Commonly used by node & react developers today'}</ListItem>
+      <ListItem>{'Developed by Facebook'}</ListItem>
       <ListItem>{'Natively supports monorepos'}</ListItem>
       <ListItem>{'More exclusive features'}</ListItem>
     </List>

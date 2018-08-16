@@ -8,6 +8,9 @@ import ProjectGoals from './ProjectGoals';
 import PersonalGoals from './PersonalGoals';
 import UseCasesTitle from './UseCases/Title';
 import Proposals from './Proposals';
+import Obstacles from './Obstacles';
+import Conclusion from './Conclusion';
+import SoftwareStack from './SoftwareStack';
 
 export default [
   <Title key={'title'} />,
@@ -21,5 +24,8 @@ export default [
     <PersonalGoals key={'personal goals'} />,
   ],
   [<UseCasesTitle key={'use cases title'} />],
+  SoftwareStack,
+  <Obstacles key={'obstacles'} />,
   Proposals,
+  Conclusion,
 ];
