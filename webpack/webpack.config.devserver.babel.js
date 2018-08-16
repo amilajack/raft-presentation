@@ -12,13 +12,13 @@ const ssl = process.env.SSL === 'true' || false;
 
 export default merge.smartStrategy({
   entry: 'prepend',
-  plugins: 'append'
+  plugins: 'append',
 })(webpackDev, {
   entry: {
     Presentation: [
       `webpack-dev-server/client?http${ssl ? 's' : ''}://localhost:${port}/`,
-      'webpack/hot/only-dev-server'
-    ]
+      'webpack/hot/only-dev-server',
+    ],
   },
 
   devServer: {
@@ -33,13 +33,13 @@ export default merge.smartStrategy({
     historyApiFallback: false,
     inline: false,
     contentBase: path.resolve(__dirname, '..', 'dist/assets'),
-    watchContentBase: true
+    watchContentBase: true,
   },
 
   plugins: [
     new WriteFilePlugin({
       test: /\.((woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?)|(html|ejs)$/,
-      useHashIndex: true
+      useHashIndex: true,
     }),
 
     new DashboardPlugin(),
@@ -47,6 +47,6 @@ export default merge.smartStrategy({
     new HotModuleReplacementPlugin({
       // multiStep: true,
       // ADD multiStep BACK WHEN FIXED (https://github.com/webpack/webpack/issues/6693)
-    })
-  ]
+    }),
+  ],
 });

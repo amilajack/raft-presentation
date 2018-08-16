@@ -10,7 +10,7 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
 } from 'spectacle';
 import Profile from './Profile';
 

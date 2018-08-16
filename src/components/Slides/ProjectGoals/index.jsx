@@ -10,7 +10,7 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
 } from 'spectacle';
 
 const ProjectGoals = props => (
@@ -49,7 +49,7 @@ const ProjectGoals = props => (
           <ListItem>Item 3</ListItem>
           <ListItem>Item 4</ListItem>
         </List>
-      </Slide>
+      </Slide>,
     ]}
   </Fragment>
 );

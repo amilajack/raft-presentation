@@ -11,7 +11,7 @@ const datestring = moment().format('MM-DD-YY_HH:mm');
 export default merge.smartStrategy({
   entry: 'prepend',
   plugins: 'append',
-  'module.rules': 'prepend'
+  'module.rules': 'prepend',
 })(webpackCommon, {
   mode: 'production',
 
@@ -19,24 +19,24 @@ export default merge.smartStrategy({
 
   output: {
     filename: '[hash].js',
-    chunkFilename: '[hash].[chunkhash].js'
+    chunkFilename: '[hash].[chunkhash].js',
   },
 
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
-        parallel: true
-      })
-    ]
+        parallel: true,
+      }),
+    ],
   },
 
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: [{ loader: 'babel-loader' }]
-      }
-    ]
+        use: [{ loader: 'babel-loader' }],
+      },
+    ],
   },
 
   plugins: [
@@ -51,7 +51,7 @@ export default merge.smartStrategy({
       statsFilename: path.join(
         __dirname,
         `./logs/webpack/production/stats_${datestring}.json`
-      )
-    })
-  ]
+      ),
+    }),
+  ],
 });

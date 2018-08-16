@@ -11,7 +11,7 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
 } from 'spectacle';
 
 export default class Profile extends Component {
