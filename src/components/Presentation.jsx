@@ -24,12 +24,12 @@ const theme = createTheme(
     header: '#AFD135',
     secondary: 'white',
     tertiary: '#03A9FC',
-    quaternary: '#CECECE',
+    quaternary: '#CECECE'
   },
   // fonts
   {
     primary: 'Ntnx',
-    secondary: 'Ntnx',
+    secondary: 'Ntnx'
   }
 );
 

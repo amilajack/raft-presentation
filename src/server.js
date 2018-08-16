@@ -10,7 +10,7 @@ const assetsDir = path.join(__dirname, 'assets');
 
 app.use(express.static(assetsDir));
 
-app.listen(serverPort, 'localhost', (err) => {
+app.listen(serverPort, 'localhost', err => {
   if (err) {
     throw err;
   }

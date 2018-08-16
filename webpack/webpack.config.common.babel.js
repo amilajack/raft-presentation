@@ -16,28 +16,28 @@ export default {
   context: path.join(__dirname, '..'),
 
   entry: {
-    Presentation: [path.join(__dirname, '..', 'src/components/Entry.jsx')],
+    Presentation: [path.join(__dirname, '..', 'src/components/Entry.jsx')]
   },
 
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
 
   output: {
     path: path.join(__dirname, '..', 'dist/assets/bundles/'),
-    publicPath: '/bundles/',
+    publicPath: '/bundles/'
   },
 
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
       },
 
       {
         test: /\.(png|jpg|gif)$/,
-        use: [{ loader: 'url-loader' }],
+        use: [{ loader: 'url-loader' }]
       },
 
       {
@@ -49,23 +49,23 @@ export default {
               name: '[hash].[ext]',
               useRelativePath: false,
               outputPath: '../fonts/',
-              publicPath: '/fonts/',
-            },
+              publicPath: '/fonts/'
+            }
           }
-        ],
+        ]
       }
-    ],
+    ]
   },
 
   plugins: [
     new CleanWebpackPlugin([path.join(__dirname, '..', 'dist/assets')], {
       verbose: process.env.VERBOSE === 'true',
-      allowExternal: true,
+      allowExternal: true
     }),
 
     new EnvironmentPlugin({
       DEBUG: JSON.stringify(process.env.DEBUG) || false,
-      TITLE: title,
+      TITLE: title
     }),
 
     new ProvidePlugin(Globals),
@@ -74,7 +74,7 @@ export default {
       title,
       inject: true,
       template: path.join(__dirname, '..', 'src/templates/index.ejs'),
-      filename: path.join(__dirname, '..', 'dist/assets/index.html'),
+      filename: path.join(__dirname, '..', 'dist/assets/index.html')
     })
-  ],
+  ]
 };
