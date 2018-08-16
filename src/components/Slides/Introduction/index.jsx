@@ -16,23 +16,19 @@ import {
 } from 'spectacle';
 
 const Introduction = props => (
-  <Slide transition={['fade']} bgColor={'secondary'}>
+  <Slide transition={['fade']} bgColor={'secondary'} {...props}>
     <Heading textColor={'primary'}>Introduction</Heading>
-    <List textColor={'body'}>
+    <List textColor={'body'} style={{ paddingLeft: 'inherit' }}>
       <ListItem>San Jose State University</ListItem>
-      <List>
+      <List textColor={'body'} style={{ paddingLeft: 'inherit' }}>
         <ListItem>B.S., Computer Science</ListItem>
         <ListItem>Minor, Mathematics</ListItem>
         <ListItem>Graduating May 2019</ListItem>
       </List>
-      <Fill>
-        <ListItem>
-          Internship Duration:
-          <List>
-            <ListItem>May - August 2018 (3 Months)</ListItem>
-          </List>
-        </ListItem>
-      </Fill>
+      <ListItem>Internship Duration:</ListItem>
+      <List textColor={'body'} style={{ paddingLeft: 'inherit' }}>
+        <ListItem>May - August 2018 (3 Months)</ListItem>
+      </List>
     </List>
   </Slide>
 );

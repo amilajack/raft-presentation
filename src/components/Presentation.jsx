@@ -37,11 +37,12 @@ const theme = createTheme(
 
 const Presentation = props => (
   <Deck
+    contentWidth={1700}
     controls={false}
     transition={['zoom', 'slide']}
     transitionDuration={500}
     theme={theme}
-    progress={'bar'}
+    progress={'pacman'}
     {...props}
   >
     {Slides}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Heading, Slide } from 'spectacle';
 
-const UseCases = props => (
+const ProposalsTitle = props => (
   <Slide transition={['zoom']} bgColor={'primary'} {...props}>
     <Heading
       size={1}
@@ -12,15 +12,15 @@ const UseCases = props => (
       textColor={'header'}
       style={{ fontWeight: 'normal' }}
     >
-      {'Use Cases'}
+      {'Proposals'}
     </Heading>
   </Slide>
 );
 
-UseCases.displayName = 'UseCases';
+ProposalsTitle.displayName = 'ProposalsTitle';
 
-UseCases.propTypes = {};
+ProposalsTitle.propTypes = {};
 
-UseCases.defaultProps = {};
+ProposalsTitle.defaultProps = {};
 
-export default UseCases;
+export default ProposalsTitle;

@@ -1,3 +1,7 @@
+.spectacle-slide {
+  overflow: scroll !important;
+}
+
 code {
   text-align: left !important;
   display: inline-block !important;

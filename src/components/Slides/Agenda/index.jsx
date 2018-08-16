@@ -29,7 +29,7 @@ const source = `\`\`\`bash
 \`\`\``;
 
 const Agenda = props => (
-  <Slide transition={['fade']} bgColor={'primary'}>
+  <Slide transition={['fade']} bgColor={'primary'} {...props}>
     <Heading textColor={'header'}>Agenda</Heading>
     <Fit>
       <Text textColor={'secondary'} padding={0} textSize={'unset'}>
