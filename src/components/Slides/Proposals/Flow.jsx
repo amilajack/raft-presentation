@@ -1,7 +1,6 @@
 // @flow
 import PropTypes from 'prop-types';
 import React from 'react';
-// import GridLayout from 'react-grid-layout';
 import {
   BlockQuote,
   Cite,
