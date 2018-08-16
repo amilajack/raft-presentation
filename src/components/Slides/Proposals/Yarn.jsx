@@ -14,14 +14,14 @@ import {
   Slide,
   Text,
 } from 'spectacle';
-import YarnLogo from './YarnLogo';
+import YarnLogo from './Logos/YarnLogo';
 
 const Yarn = props => (
   <Slide transition={['fade']} bgColor={'secondary'} {...props}>
     <YarnLogo width={null} height={'200px'} />
-    <List textColor={'body'} style={{ whiteSpace: 'nowrap' }}>
-      <ListItem>{"SJSU President's list - 4.0 GPA for 2017"}</ListItem>
-      <ListItem>{'First hackathon - UCSB Jan 2018'}</ListItem>
+    <List textColor={'body'}>
+      <ListItem>{'Faster than NPM'}</ListItem>
+      <ListItem>{'Natively supports monorepos'}</ListItem>
     </List>
   </Slide>
 );
