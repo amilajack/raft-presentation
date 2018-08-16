@@ -16,5 +16,8 @@
         "ignoreRestSiblings": true
       }
     ]
+  },
+  "globals": {
+    "hljs": true
   }
 }

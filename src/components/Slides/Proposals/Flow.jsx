@@ -13,15 +13,13 @@ import {
   Slide,
   Text,
 } from 'spectacle';
-import ReactMarkdown from 'react-markdown';
+import Highlight from 'react-highlight.js';
 import FlowLogo from './Logos/FlowLogo';
 
-const flowExample = `\`\`\`javascript
-function foo(bar: string): number {
+const flowExample = `function foo(bar: string): number {
   console.log(bar);
   return 10;
-}
-\`\`\``;
+}`;
 
 const Flow = props => (
   <Slide transition={['fade']} bgColor={'secondary'} {...props}>
@@ -30,11 +28,7 @@ const Flow = props => (
     <List textColor={'body'}>
       <ListItem>{'Static Type Checker for JavaScript'}</ListItem>
       <ListItem>{'Get warnings & assertions with Flow-Runtime'}</ListItem>
-      <br />
-      <ReactMarkdown
-        source={flowExample}
-        className={'markdown-body markdown-custom'}
-      />
+      <Highlight language={'javascript'}>{flowExample}</Highlight>
     </List>
   </Slide>
 );

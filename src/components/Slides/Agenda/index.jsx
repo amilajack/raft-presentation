@@ -1,7 +1,7 @@
 // @flow
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import Highlight from 'react-highlight.js';
 import {
   BlockQuote,
   Cite,
@@ -15,8 +15,7 @@ import {
   Text,
 } from 'spectacle';
 
-const source = `\`\`\`bash
-.
+const source = `.
 ├── Title
 ├── Introduction
 ├── Project Goals
@@ -25,20 +24,12 @@ const source = `\`\`\`bash
 ├── Proposals
 ├── Conclusion
 ├── Q&A
-└── Live Demo
-\`\`\``;
+└── Live Demo`;
 
 const Agenda = props => (
   <Slide transition={['fade']} bgColor={'primary'} {...props}>
     <Heading textColor={'header'}>Agenda</Heading>
-    <Fit>
-      <Text textColor={'secondary'} padding={0} textSize={'unset'}>
-        <ReactMarkdown
-          source={source}
-          className={'markdown-body markdown-custom'}
-        />
-      </Text>
-    </Fit>
+    <Highlight language={'agenda-code bash'}>{source}</Highlight>
   </Slide>
 );
 

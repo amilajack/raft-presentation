@@ -1,5 +1,6 @@
 // @flow
 // import 'normalize.css';
+import 'highlight.js/styles/atom-one-dark.css';
 import 'prism-reactjs/dist/index.css';
 import '../styles/custom_style.css';
 import React, { Component } from 'react';
@@ -35,24 +36,28 @@ const theme = createTheme(
   }
 );
 
-const Presentation = props => (
-  <Deck
-    contentWidth={1700}
-    controls={false}
-    transition={['zoom', 'slide']}
-    transitionDuration={500}
-    theme={theme}
-    progress={'pacman'}
-    {...props}
-  >
-    {Slides}
-  </Deck>
+export default hot(module)(
+  class Presentation extends Component {
+    static displayName = 'Presentation';
+
+    static defaultProps = {};
+
+    static propTypes = {};
+
+    render() {
+      return (
+        <Deck
+          contentWidth={1700}
+          controls={false}
+          transition={['zoom', 'slide']}
+          transitionDuration={500}
+          theme={theme}
+          progress={'pacman'}
+          {...this.props}
+        >
+          {Slides}
+        </Deck>
+      );
+    }
+  }
 );
-
-Presentation.displayName = 'Presentation';
-
-Presentation.defaultProps = {};
-
-Presentation.propTypes = {};
-
-export default hot(module)(Presentation);

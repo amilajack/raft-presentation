@@ -23,6 +23,7 @@ const Babel = props => (
     <List textColor={'body'}>
       <ListItem>{'Compiles next-gen JS code'}</ListItem>
       <ListItem>{'Create an optimized production build'}</ListItem>
+      <ListItem>{'Upgrade to Babel 7 when ready'}</ListItem>
     </List>
   </Slide>
 );
