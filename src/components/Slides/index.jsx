@@ -6,7 +6,7 @@ import Introduction from './Introduction';
 import NewExperience from './NewExperience';
 import ProjectGoals from './ProjectGoals';
 import PersonalGoals from './PersonalGoals';
-import UseCases from './UseCases';
+// import UseCases from './UseCases';
 import Proposals from './Proposals';
 import Obstacles from './Obstacles';
 import Conclusion from './Conclusion';
@@ -23,7 +23,7 @@ export default [
     <ProjectGoals key={'project goals'} />,
     <PersonalGoals key={'personal goals'} />,
   ],
-  UseCases,
+  // UseCases,
   SoftwareStack,
   <Obstacles key={'obstacles'} />,
   Proposals,
