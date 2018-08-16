@@ -27,6 +27,7 @@ const Obstacles = props => (
       <ListItem>{'Migrating from original frontend'}</ListItem>
       <ListItem>{'Too many planned features'}</ListItem>
       <ListItem>{'Communication with non-React devs'}</ListItem>
+      <ListItem>{'No time to write test cases'}</ListItem>
     </List>
   </Slide>
 );
