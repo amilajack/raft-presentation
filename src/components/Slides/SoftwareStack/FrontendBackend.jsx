@@ -23,6 +23,7 @@ const frontendStack = `.
 ├── Nutanix Prism-Reactjs
 ├── React-Router
 ├── React-Loadable
+|   └── Async Codesplitting
 └── JQuery`;
 
 const backendStack = `.
