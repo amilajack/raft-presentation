@@ -36,6 +36,21 @@ export default merge.smartStrategy({
         test: /\.(js|jsx)$/,
         use: [{ loader: 'babel-loader' }],
       },
+
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[hash].[ext]',
+              useRelativePath: false,
+              outputPath: '../fonts/',
+              publicPath: '/fonts/',
+            },
+          },
+        ],
+      },
     ],
   },
 

@@ -1,6 +1,7 @@
 // @flow
 // import 'normalize.css';
 import 'prism-reactjs/dist/index.css';
+import '../styles/custom_style.css';
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import {
@@ -15,7 +16,7 @@ import {
   Text,
 } from 'spectacle';
 import createTheme from 'spectacle/lib/themes/default';
-import { TitleSlide, IntroductionSlide } from './Slides';
+import Slides from './Slides';
 
 const theme = createTheme(
   // colors
@@ -28,26 +29,29 @@ const theme = createTheme(
   // fonts
   {
     primary: 'Ntnx',
+    header: 'Ntnx',
     secondary: 'Ntnx',
     body: 'Ntnx',
   }
 );
 
-export default hot(module)(
-  class Presentation extends Component {
-    render() {
-      return (
-        <Deck
-          controls
-          transition={['zoom', 'slide']}
-          transitionDuration={500}
-          theme={theme}
-          progress={'bar'}
-        >
-          <TitleSlide />
-          <IntroductionSlide />
-        </Deck>
-      );
-    }
-  }
+const Presentation = props => (
+  <Deck
+    controls={false}
+    transition={['zoom', 'slide']}
+    transitionDuration={500}
+    theme={theme}
+    progress={'bar'}
+    {...props}
+  >
+    {Slides}
+  </Deck>
 );
+
+Presentation.displayName = 'Presentation';
+
+Presentation.defaultProps = {};
+
+Presentation.propTypes = {};
+
+export default hot(module)(Presentation);

@@ -1,10 +1,12 @@
 // @flow
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
+import React from 'react';
+// import GridLayout from 'react-grid-layout';
 import {
   BlockQuote,
   Cite,
   Deck,
+  Fill,
   Heading,
   ListItem,
   List,
@@ -14,44 +16,25 @@ import {
 } from 'spectacle';
 
 const ProjectGoals = props => (
-  <Fragment>
-    {[
-      <Slide transition={['fade']} bgColor={'tertiary'}>
-        <Heading size={6} textColor={'primary'} caps>
-          Typography
-        </Heading>
-        <Heading size={1} textColor={'secondary'}>
-          Heading 1
-        </Heading>
-        <Heading size={2} textColor={'secondary'}>
-          Heading 2
-        </Heading>
-        <Heading size={3} textColor={'secondary'}>
-          Heading 3
-        </Heading>
-        <Heading size={4} textColor={'secondary'}>
-          Heading 4
-        </Heading>
-        <Heading size={5} textColor={'secondary'}>
-          Heading 5
-        </Heading>
-        <Text size={6} textColor={'secondary'}>
-          Standard text
-        </Text>
-      </Slide>,
-      <Slide transition={['fade']} bgColor={'primary'} textColor={'tertiary'}>
-        <Heading size={6} textColor={'secondary'} caps>
-          Standard List
-        </Heading>
-        <List>
-          <ListItem>Item 1</ListItem>
-          <ListItem>Item 2</ListItem>
-          <ListItem>Item 3</ListItem>
-          <ListItem>Item 4</ListItem>
-        </List>
-      </Slide>,
-    ]}
-  </Fragment>
+  <Slide transition={['fade']} bgColor={'secondary'}>
+    <Heading textColor={'primary'}>Project Goals</Heading>
+    <List textColor={'body'}>
+      <ListItem>Create a GUI to automate processes</ListItem>
+      <List>
+        <ListItem>B.S., Computer Science</ListItem>
+        <ListItem>Minor, Mathematics</ListItem>
+        <ListItem>Graduating May 2019</ListItem>
+      </List>
+      <Fill>
+        <ListItem>
+          Internship Duration:
+          <List>
+            <ListItem>May - August 2018 (3 Months)</ListItem>
+          </List>
+        </ListItem>
+      </Fill>
+    </List>
+  </Slide>
 );
 
 ProjectGoals.displayName = 'ProjectGoals';

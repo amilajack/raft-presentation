@@ -94,6 +94,7 @@
     "react-dom": "^16.4.1",
     "react-grid-layout": "^0.16.6",
     "react-hot-loader": "^4.3.4",
+    "react-markdown": "^3.4.1",
     "react-router-dom": "^4.3.1",
     "react-transform-catch-errors": "^1.0.2",
     "rimraf": "^2.6.2",
@@ -104,6 +105,9 @@
     "stylelint": "^9.4.0",
     "stylelint-config-airbnb": "^0.0.0",
     "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^1.0.0",
+    "stylelint-scss": "^3.3.0",
     "title-case": "^2.1.1",
     "uglifyjs-webpack-plugin": "^1.3.0",
     "url-loader": "^0.6.2",
@@ -137,7 +141,6 @@
         "git add"
       ],
       "*.*(css|scss)": [
-        "stylelint --ignore-path .eslintignore --parser scss --fix",
         "prettier --ignore-path .eslintignore --write",
         "git add"
       ],

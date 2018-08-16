@@ -15,9 +15,11 @@ import {
   Text,
 } from 'spectacle';
 
-const Introduction = props => (
+const NewExperience = props => (
   <Slide transition={['fade']} bgColor={'secondary'}>
-    <Heading textColor={'primary'}>Introduction</Heading>
+    <Heading textColor={'primary'}>
+      Experiences after Summer 17 Nutanix Internship
+    </Heading>
     <List textColor={'body'}>
       <ListItem>San Jose State University</ListItem>
       <List>
@@ -37,10 +39,10 @@ const Introduction = props => (
   </Slide>
 );
 
-Introduction.displayName = 'Introduction';
+NewExperience.displayName = 'NewExperience';
 
-Introduction.propTypes = {};
+NewExperience.propTypes = {};
 
-Introduction.defaultProps = {};
+NewExperience.defaultProps = {};
 
-export default Introduction;
+export default NewExperience;
