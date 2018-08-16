@@ -1,7 +1,6 @@
 // @flow
 import PropTypes from 'prop-types';
 import React from 'react';
-// import GridLayout from 'react-grid-layout';
 import {
   BlockQuote,
   Cite,
@@ -14,20 +13,22 @@ import {
   Slide,
   Text,
 } from 'spectacle';
+import BundleAnalysisPic from './bundle.png';
+// import GridLayout from 'react-grid-layout';
 
-const Obstacles = props => (
+const BundleAnalysis = props => (
   <Slide transition={['fade']} bgColor={'secondary'} {...props}>
     <Heading textColor={'primary'} lineHeight={1}>
       {'Webpack bundle analysis'}
     </Heading>
-    <img src={require('./bundle.png')} />
+    <img src={BundleAnalysisPic} alt={'bundle analysis'} />
   </Slide>
 );
 
-Obstacles.displayName = 'Obstacles';
+BundleAnalysis.displayName = 'Obstacles';
 
-Obstacles.propTypes = {};
+BundleAnalysis.propTypes = {};
 
-Obstacles.defaultProps = {};
+BundleAnalysis.defaultProps = {};
 
-export default Obstacles;
+export default BundleAnalysis;
